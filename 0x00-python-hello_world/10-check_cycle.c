@@ -9,20 +9,21 @@
  * if ther s a cycle -1.
  *
  */
-int check_cycle(listsint_t*list)
+int check_cycle(listsint_t *list)
 {
-	listsint_t *turtle, *hare;
+	listint_t *turtle, *hare;
 
 	if (list == NULL || list->nect == NULL)
 		return (0);
 
-	turtle = lists->next;
+	turtle = list->next;
 	hare = list->next->next;
 
 	while (turtle && hare && hare->next)
 	{
 		if (turtle == hare)
 			return (1);
+
 		turtle = turtle->next;
 		hare = hare->next->next;
 	}
