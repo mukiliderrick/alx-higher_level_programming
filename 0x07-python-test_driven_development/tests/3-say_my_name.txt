@@ -1,0 +1,23 @@
+# run test with python3 -m doctest -v ./tests/3-say_my_name.txt
+
+First import method to test
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+SUCCESS CASES:
+    >>> say_my_name("Derrick","Mukili")
+    My name is Derrick Mukili
+
+    >>> say_my_name("Melissa")
+    My name is Melissa
+
+FAIL CASES:
+Test other data types:
+    >>> say_my_name(123,"last")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Mukili",1233)
+    Traceback (most recent call last):
+    ...
+    TypeError: Last_name must be a string
