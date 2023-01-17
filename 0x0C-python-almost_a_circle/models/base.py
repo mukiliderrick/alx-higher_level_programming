@@ -4,14 +4,16 @@ import json
 import csv
 import os.path
 
+
 class Base:
     """Class Base"""
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         """initialise the instances"""
-        if id != None:
+        if id is not None:
             self.id = id
         else:
-            Base.__nb_objects +=1
+            Base.__nb_objects += 1
             self.id = Base.__nb_objects
+            
